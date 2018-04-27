@@ -1,0 +1,67 @@
+img{
+  width: 200px;
+  height: 200px;
+}
+
+.main-container{
+
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px
+                      1fr;
+  grid-template-areas:  "header header"
+                        "meat vegetarian";
+
+  min-height: 100vh;
+
+}
+
+header{
+  grid-area: header;
+  text-align: center;
+}
+
+.meat-container{
+  grid-area: meat;
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px
+                      1fr
+                      1fr;
+}
+
+.recipe p{
+  max-width: 200px;
+}
+
+.meat-container{
+  margin-left: auto;
+}
+.meat-container h2{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+.vegetarian-container{
+  grid-area: vegetarian;
+
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px
+                      1fr
+                      1fr;
+}
+
+.vegetarian-container{
+  margin-right: 100px;
+}
+
+.vegetarian-container h2{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
